@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shuddha Clean Industries | Cleaning Products</title>
+  <meta name="description" content="Shuddha Clean Industries manufactures quality cleaning products in Waling, Syangja, Nepal.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:#18323b;background:#f7fbfc;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    header{position:fixed;top:0;width:100%;z-index:10;background:rgba(255,255,255,.96);box-shadow:0 2px 15px rgba(0,0,0,.08)}
+    nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:16px 22px}
+    .logo{font-size:23px;font-weight:800;color:#087f8c}.logo span{color:#25b87a}
+    .links{display:flex;gap:25px;list-style:none}.links a:hover{color:#087f8c}
+    .menu{display:none;font-size:28px;cursor:pointer}
+    .hero{min-height:100vh;padding:140px 7% 70px;display:flex;align-items:center;gap:55px;background:linear-gradient(135deg,#e8fbfa,#f7fffc)}
+    .hero-text{flex:1}.tag{display:inline-block;background:#d5f6ee;color:#087f8c;padding:7px 14px;border-radius:30px;font-weight:700;font-size:14px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.05;margin:20px 0;color:#123c46}
+    h1 span{color:#12a978}.hero p{font-size:19px;max-width:600px;color:#526b72}
+    .buttons{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+    .btn{padding:13px 23px;border-radius:30px;font-weight:700;display:inline-block}
+    .primary{background:#0a8d92;color:#fff}.secondary{border:2px solid #0a8d92;color:#087f8c}
+    .hero-art{flex:1;display:flex;justify-content:center}.bottles{display:flex;align-items:end;gap:18px}
+    .bottle{width:125px;height:270px;border-radius:22px 22px 18px 18px;background:linear-gradient(90deg,#fff,#dff8f0);box-shadow:0 20px 35px #74a9a444;position:relative;border:2px solid #cce9e5}
+    .bottle:before{content:"";position:absolute;width:52px;height:32px;background:#087f8c;top:-28px;left:34px;border-radius:7px 7px 2px 2px}
+    .bottle:after{content:"";position:absolute;left:13px;right:13px;top:88px;height:95px;border-radius:10px;background:#fff}
+    .bottle.small{height:220px;width:105px}.bottle.small:before{left:27px}
+    .label{position:absolute;z-index:2;top:103px;width:100%;text-align:center;font-weight:900;color:#087f8c;font-size:18px}
+    .label small{display:block;font-size:10px;color:#555}
+    section{padding:90px 7%}.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:38px;color:#143e47}.section-title p{color:#667b80}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about-card{background:#fff;padding:35px;border-radius:25px;box-shadow:0 10px 35px #173f4912}
+    .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.fact{padding:25px;background:#e9f8f4;border-radius:18px}.fact b{display:block;font-size:30px;color:#087f8c}
+    .products{background:#eef9f8}.grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .product{background:#fff;border-radius:22px;padding:20px;text-align:center;box-shadow:0 8px 25px #173f4910;transition:.25s}.product:hover{transform:translateY(-7px)}
+    .product-img{height:210px;display:flex;align-items:center;justify-content:center}.product-img .bottle{transform:scale(.7)}
+    .product h3{margin-top:10px;color:#17434b}.product p{font-size:14px;color:#708287}
+    .factory{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}.factory-box{background:#123f48;color:white;border-radius:28px;padding:42px}.factory-box h2{font-size:40px;margin-bottom:15px}.location{background:#dff6ef;padding:35px;border-radius:28px}
+    .contact{background:linear-gradient(135deg,#087f8c,#0d625e);color:white}.contact-wrap{max-width:1050px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact h2{font-size:40px;margin-bottom:15px}.contact-card{background:#ffffff15;padding:30px;border:1px solid #ffffff30;border-radius:22px}.contact-card p{margin:14px 0}
+    footer{text-align:center;background:#10343b;color:#cce2e4;padding:25px}
+    @media(max-width:850px){.links{display:none}.menu{display:block}.links.open{display:flex;position:absolute;top:65px;left:0;right:0;background:white;flex-direction:column;padding:20px 25px}.hero{flex-direction:column;text-align:center}.hero p{margin:auto}.hero-art{margin-top:25px}.about,.factory,.contact-wrap{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}.bottles{transform:scale(.75);margin:-25px}.hero{padding-top:120px}section{padding:65px 5%}}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#home" class="logo">SHUDDHA <span>CLEAN</span></a>
+    <div class="menu" onclick="toggleMenu()">☰</div>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li><li><a href="#factory">Factory</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-text">
+    <span class="tag">MADE IN NEPAL 🇳🇵</span>
+    <h1>Clean Home.<br><span>Better Life.</span></h1>
+    <p>Quality cleaning solutions for homes, offices, hotels and businesses — proudly manufactured in Waling, Syangja.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#products">View Products</a>
+      <a class="btn secondary" href="tel:9841569370">📞 Call 9841569370</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="bottles">
+      <div class="bottle small"><div class="label">PHENYL<small>FRESH & CLEAN</small></div></div>
+      <div class="bottle"><div class="label">TOILET<br>CLEANER<small>POWER CLEAN</small></div></div>
+      <div class="bottle small"><div class="label">DISH<br>WASH<small>LEMON FRESH</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-title"><h2>About Our Company</h2><p>Reliable cleaning products made with care.</p></div>
+  <div class="about">
+    <div class="about-card">
+      <h2>Quality You Can Trust</h2>
+      <p>Shuddha Clean Industries is a local Nepali cleaning-products manufacturer focused on practical, effective and affordable cleaning solutions.</p>
+      <br><p>Our product range is designed for everyday cleaning — from floors and toilets to dishes and general household surfaces.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>100%</b>Local manufacturing</div>
+      <div class="fact"><b>4+</b>Product categories</div>
+      <div class="fact"><b>🇳🇵</b>Made in Nepal</div>
+      <div class="fact"><b>☎</b>Direct support</div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="section-title"><h2>Our Products</h2><p>Cleaning solutions for everyday use.</p></div>
+  <div class="grid">
+    <div class="product"><div class="product-img"><div class="bottle"><div class="label">TOILET<br>CLEANER<small>POWER CLEAN</small></div></div></div><h3>Toilet Cleaner</h3><p>Powerful toilet and bathroom cleaning solution.</p></div>
+    <div class="product"><div class="product-img"><div class="bottle"><div class="label">PHENYL<small>FRESH & CLEAN</small></div></div></div><h3>Phenyl</h3><p>Fresh cleaning solution for floors and surfaces.</p></div>
+    <div class="product"><div class="product-img"><div class="bottle"><div class="label">DISH<br>WASH<small>LEMON FRESH</small></div></div></div><h3>Dish Wash</h3><p>For everyday dish and kitchen cleaning.</p></div>
+    <div class="product"><div class="product-img"><div class="bottle"><div class="label">FLOOR<br>CLEANER<small>FRESH</small></div></div></div><h3>Floor Cleaner</h3><p>Helps keep floors fresh, clean and pleasant.</p></div>
+  </div>
+</section>
+
+<section id="factory">
+  <div class="section-title"><h2>Our Factory</h2><p>Local production from the heart of Syangja.</p></div>
+  <div class="factory">
+    <div class="factory-box">
+      <h2>Made in Waling</h2>
+      <p>We are based at B.P. Chowk (Dumrikot), Waling, Syangja, Nepal. Our goal is to provide dependable cleaning products while supporting local production.</p>
+    </div>
+    <div class="location">
+      <h3>📍 Factory Location</h3>
+      <p><strong>B.P. Chowk (Dumrikot)</strong><br>Waling, Syangja<br>Nepal</p>
+      <br><a class="btn primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=B.P.%20Chowk%20Dumrikot%20Waling%20Syangja%20Nepal">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-wrap">
+    <div><h2>Let's Talk</h2><p>For product information, wholesale orders or business enquiries, contact us directly.</p></div>
+    <div class="contact-card">
+      <p>📞 <strong>9841569370</strong></p>
+      <p>📍 B.P. Chowk (Dumrikot), Waling, Syangja, Nepal</p>
+      <a class="btn primary" href="tel:9841569370">Call Now</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Shuddha Clean Industries. All rights reserved.</footer>
+<script>
+function toggleMenu(){document.getElementById('links').classList.toggle('open')}
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+</script>
+</body>
+</html>
